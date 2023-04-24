@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400&family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portafolio Brayan</title>
+  </head>
+  <body class="relative text-lg text-color-primary bg-body">
+    <div class="absolute h-20" id="header-false"></div>
+    <header class="header" id="header">
+      <p class="logo text-2xl uppercase">Devfolio</p>
+      <nav class="">
+        <ul class="flex gap-5 text-2xl">
+          <li>
+            <a href="#" class="under-line-nav">Casa</a>
+          </li>
+          <li>
+            <a href="#" class="under-line-nav">Acerca de</a>
+          </li>
+          <li><a href="#" class="under-line-nav">Portafolio</a></li>
+          <li><a href="#" class="under-line-nav">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <ul class="fixed top-1/2 -translate-y-1/2 left-16 flex flex-col gap-4">
+        <li class="social-network group" style="--i: #343a40; --j: #000000">
+          <span class="absolute"
+            ><i class="fa-brands fa-github social-network-icon"></i
+          ></span>
+          <span class="social-network-span">Github</span>
+        </li>
+        <li class="social-network group" style="--i: #75aaff; --j: #1d4380">
+          <span class="absolute"
+            ><i class="fa-brands fa-linkedin social-network-icon"></i
+          ></span>
+          <span class="social-network-span">Linkedin</span>
+        </li>
+        <li class="social-network group" style="--i: #4d9944; --j: #5ec3d4">
+          <span class="absolute"
+            ><i class="fa-brands fa-whatsapp social-network-icon"></i
+          ></span>
+          <span class="social-network-span">Whatsapp</span>
+        </li>
+      </ul>
+
+      <section class="" id="hero-section">
+        <div
+          class="container max-w-7xl h-93 mx-auto grid grid-cols-hero items-center gap-4"
+        >
+          <div class="justify-self-center -translate-y-[200%]">
+            <h1 class="text-4xl mb-1">HOLA, SOY BRAYAN</h1>
+
+            <div class="text-presentation-container">
+              <span class="text-2xl"></span>
+            </div>
+          </div>
+          <div class="container-img">
+            <img
+              src="src/imgs/fondo_hero_2_op_reduce_.webp"
+              class="max-w-md"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="h-screen"></section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/ed5500335a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

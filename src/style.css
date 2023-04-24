@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Source Serif Pro', serif;
+    }
+}
+
+@layer components{
+
+    .bg-body{
+        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,2,51,1) 50%, rgba(0,0,0,1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,2,51,1) 50%, rgba(0,0,0,1) 100%);
+        background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,2,51,1) 50%, rgba(0,0,0,1) 100%);
+    }
+    
+    .header {
+        @apply flex justify-between items-center w-full h-20 px-12 relative;
+    }
+    
+    .bg-header-fixed {
+        background: linear-gradient(360deg,#000000c6 10%, #05011bfa 50%, #000000f1);
+        background: -webkit-linear-gradient(360deg,#000000c6 10%, #05011bfa 50%, #000000f1);
+        background: -moz-linear-gradient(360deg,#000000c6 10%, #05011bfa 50%, #000000f1);
+    }
+  
+
+    .header-fixed {
+        @apply  fixed bg-header-fixed top-0 ;
+    }
+
+    .under-line-nav{
+        @apply inline-block transition-all duration-300 hover:text-color-secondary relative after:-bottom-0.5 after:left-0 after:absolute after:w-0 after:h-0.5 after:bg-color-secondary after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-500 after:transition-[width,left] hover:after:w-full hover:after:left-0
+    }
+
+
+    /* REDES SOCIALES*/
+    .social-network {
+        @apply relative w-14 h-14 rounded-[60px] cursor-pointer flex justify-center items-center shadow-[0_5px_12px_#A5C5E9] transition-all duration-500 social-network-hover social-network-before social-network-hover-before social-network-after;
+    }
+    .social-network-hover{
+      @apply  hover:w-[10rem] hover:shadow-[0_10px_25px_rgba(0,0,0,0)] ;
+    }
+    .social-network-before{
+        @apply before:absolute before:inset-1 before:rounded-[50px] before:gradient-social-networt before:opacity-0 before:transition-all before:duration-500 ;
+    }
+
+    .gradient-social-networt{
+        background: linear-gradient(45deg, var(--i), var(--j));
+    }
+
+    .social-network-hover-before{
+        @apply hover:before:opacity-100;
+    }
+    .social-network-after{
+        @apply after:absolute after:top-[10px] after:w-full after:h-full after:rounded-[60px] after:gradient-social-networt after:opacity-0 after:transition-all after:duration-500 after:-z-[1] after:filter after:blur-[15px] hover:after:opacity-50 ;
+    }
+
+    .social-network-icon{
+        @apply text-color-primary text-3xl transition-all delay-200 group-hover:scale-0 group-hover:text-4xl group-hover:delay-200;
+    }
+
+    .social-network-span{
+        @apply  absolute text-color-secondary text-xl uppercase scale-0 transition-all duration-500 delay-0 group-hover:scale-100 group-hover:delay-200;
+    }
+
+
+
+
+
+}
+

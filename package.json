@@ -1,0 +1,16 @@
+{
+  "name": "portafolio-tailwind",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tail":"tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.3.0"
+  }
+}
