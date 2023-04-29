@@ -6,73 +6,157 @@
     <link rel="stylesheet" href="./dist/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400&family=Source+Serif+Pro&display=swap"
-      rel="stylesheet"
-    />
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
     <title>Portafolio Brayan</title>
   </head>
-  <body class="relative text-lg text-color-primary bg-body">
+  <body class="relative text-lg text-[#A5C5E9] bg-body">
     <div class="absolute h-20" id="header-false"></div>
-    <header class="header" id="header">
+    <header class="header z-50" id="header">
       <p class="logo text-2xl uppercase">Devfolio</p>
       <nav class="">
         <ul class="flex gap-5 text-2xl">
           <li>
-            <a href="#" class="under-line-nav">Casa</a>
+            <a href="#hero-section" class="under-line-nav">Casa</a>
           </li>
           <li>
-            <a href="#" class="under-line-nav">Acerca de</a>
+            <a href="#about" class="under-line-nav">Acerca de</a>
           </li>
-          <li><a href="#" class="under-line-nav">Portafolio</a></li>
+          <li><a href="#portfolio" class="under-line-nav">Portafolio</a></li>
           <li><a href="#" class="under-line-nav">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <ul class="fixed top-1/2 -translate-y-1/2 left-16 flex flex-col gap-4">
+      <ul class="fixed top-1/2 -translate-y-1/2 left-5 flex flex-col gap-4">
         <li class="social-network group" style="--i: #343a40; --j: #000000">
+         
           <span class="absolute"
             ><i class="fa-brands fa-github social-network-icon"></i
           ></span>
-          <span class="social-network-span">Github</span>
+          <a href="https://github.com/WIKILLIX" target="_blank" class="social-network-span">Github</a>
         </li>
         <li class="social-network group" style="--i: #75aaff; --j: #1d4380">
           <span class="absolute"
             ><i class="fa-brands fa-linkedin social-network-icon"></i
           ></span>
-          <span class="social-network-span">Linkedin</span>
+          <a href="https://www.linkedin.com/in/brayan-pacheco-jimenez-694b70238/" target="_blank" class="social-network-span">Linkedin</a>
         </li>
         <li class="social-network group" style="--i: #4d9944; --j: #5ec3d4">
           <span class="absolute"
             ><i class="fa-brands fa-whatsapp social-network-icon"></i
           ></span>
-          <span class="social-network-span">Whatsapp</span>
+          <a href="https://wa.me/573156265674" target="_blank" class="social-network-span">Whatsapp</a>
         </li>
       </ul>
 
       <section class="" id="hero-section">
         <div
-          class="container max-w-7xl h-93 mx-auto grid grid-cols-hero items-center gap-4"
+          class="max-w-7xl h-[93vh] mx-auto grid  items-center"
         >
-          <div class="justify-self-center -translate-y-[200%]">
-            <h1 class="text-4xl mb-1">HOLA, SOY BRAYAN</h1>
+          <div class="justify-self-center ">
+            <h1 class="text-[3rem] mb-10">HOLA, MI NOMBRE ES BRAYAN</h1>
 
-            <div class="text-presentation-container">
-              <span class="text-2xl"></span>
+            <div class="w-[30rem] h-[5rem] overflow-auto">
+              <h3 class="text-2xl">Y soy <span class="text-2xl text-presentation font-bold"></span></h3>
+              
             </div>
           </div>
-          <div class="container-img">
+          <!-- <div class="">
             <img
               src="src/imgs/fondo_hero_2_op_reduce_.webp"
-              class="max-w-md"
+              class="w-full h-full"
               alt=""
             />
+          </div> -->
+        </div>
+      </section>
+      <section id="about" class="pt-20">
+        <div class="h-screen grid grid-cols-2 grid-rows-[minmax(430px,1fr)_minmax(350px,_430px)] max-w-[75vw] mx-auto gap-5">
+          <div class=" overflow-hidden border-4 border-white max-h-[470px] mb-10 ">
+            <img src="./src/imgs/perfil dibujo.webp" alt="" class=" h-full mx-auto ">
+          </div>
+          <div class="pl-10 flex flex-col gap-5" >
+            <h2 class="titule-secondary mb-2">Acerca de mi</h2>
+            <p>Como apasionado y experimentado desarrollador fullstack con una gran dedicación en la creación de aplicaciones web complejas y responsivas, siempre he sentido un gran interés por los números, la lógica y la lectura.</p>
+             <p> Desde que comencé a trabajar en este campo, me he dado cuenta de que puedo llevar mis habilidades de análisis a un nivel superior, al resolver problemas y desafíos tanto para empresas como para particulares a través del desarrollo de software.
+            </p>
+            <ul class="mt-14">
+              <li class="mb-4"><i class="fa-sharp fa-regular fa-greater-than fa-beat"></i>  Ciudad: Bogota, Colombia</li>
+              <li class="mb-4"><i class="fa-sharp fa-regular fa-greater-than fa-beat"></i>  Frelance: Disponible</li>
+              <li><i class="fa-sharp fa-regular fa-greater-than fa-beat"></i><a href="#"> CV</a></li>
+            </ul>
+          </div>
+          <div class="col-span-full flex justify-center items-center relative">
+            <h2 class="absolute -top-7 left-0 titule-secondary">Habilidades</h2>
+            
+            <ul class="flex items-center justify-between w-full  ">
+              <li style="--color:#ffdf00" class="skills">
+                <span class="base"></span>
+                <span class="title">Javascript</span>
+                <span class="icon">
+                    <i class="fa-brands fa-square-js"></i></li>
+                </span>
+                <span class="level drop-shadow-[0_0_2px_#ffdf00]">intermedio</span>
+                <li style="--color:#44a8b3" class="skills">
+                  <span class="base"> </span>
+                  <span class="title">Tailwind</span>
+                  <span class="icon"><img src="./src/imgs/tailwind.svg" class="w-20" alt="" ></span>
+                  <span class="level drop-shadow-[0_0_2px_#44a8b3]">intermedio</span>
+                </li >
+              <!-- <li style="--color:#f05033" class="skills">
+                <span class="base"> </span>
+                <span class="title">Git</span>
+                <span class="icon"><i class="fa-brands fa-git-alt"></i></span>
+                <span class="level drop-shadow-[0_0_2px_#f05033]">intermedio</span>
+              </li >
+              <li style="--color:#A5C5E9" class="skills">
+                <span class="base"> </span>
+                <span class="title">Github</span>
+                <span class="icon"><i class="fa-brands fa-github"></i></span>
+                <span class="level drop-shadow-[0_0_2px_#A5C5E9]">intermedio</span>
+              </li> -->
+             
+              <li style="--color:#ba0c0d" class="skills">
+                <span class="base"> </span>
+                <span class="title">Java</span>
+                <span class="icon"><i class="fa-brands fa-java"></i></span>
+                <span class="level drop-shadow-[0_0_2px_#ba0c0d]">intermedio</span>
+              </li>
+              <li style="--color:#3fb984" class="skills">
+                <span class="base"> </span>
+                <span class="title">Vue 3</span>
+                <span class="icon"><i class="fa-brands fa-vuejs"></i></span>
+                <span class="level drop-shadow-[0_0_2px_#3fb984]">intermedio</span>
+              </li>
+              <li style="--color:#ff5722" class="skills">
+                <span class="base"> </span>
+                <span class="title">html 5</span>
+                <span class="icon"><i class="fa-brands fa-html5"></i></span>
+                <span class="level drop-shadow-[0_0_2px_#ff5722]">avanzado</span>
+              </li>
+              <li style="--color:#264de4" class="skills">
+                <span class="base"> </span>
+                <span class="title">css 3</span>
+                <span class="icon"><i class="fa-brands fa-css3"></i></span>
+                <span class="level drop-shadow-[0_0_2px_#264de4]">intermedio</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="h-screen"></section>
+      <section id="portfolio" class="pt-20">
+        <div class="h-screen max-w-[75vw] mx-auto">
+          <h2 class="titule-secundary text-2xl">portafolio</h2>
+          <div class="grid grid-cols-4 gap-5 w-full h-full">
+            <div class="bg-white"></div>
+            <div class="bg-red-700"></div>
+            <div class="bg-blue-950"></div>
+            <div class="bg-green-600"></div>
+          </div>
+        </div>
+      </section>
     </main>
     <script
       src="https://kit.fontawesome.com/ed5500335a.js"

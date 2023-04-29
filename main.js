@@ -1,4 +1,5 @@
 "use strict";
+import Typed from "typed.js";
 
 const elemento = document.querySelector("#header-false");
 const header = document.querySelector("#header");
@@ -18,3 +19,12 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(elemento);
+
+const typed = new Typed(".text-presentation", {
+  strings: ["web developer", "fullstack", "freelance"],
+  typeSpeed: 50,
+  backSpeed: 40,
+  startDelay: 300,
+  backDelay: 1200,
+  loop: true,
+});
