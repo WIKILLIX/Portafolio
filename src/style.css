@@ -18,7 +18,7 @@
 @layer components{
 
     .titule-secondary{
-        @apply font-medium text-2xl tracking-wider uppercase;
+        @apply font-semibold text-2xl tracking-wider uppercase;
     }
 
     .bg-body{
@@ -27,6 +27,8 @@
         background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,2,51,1) 50%, rgba(0,0,0,1) 100%);
     }
     
+
+    /* HEADER*/
     .header {
         @apply flex justify-between items-center w-full h-20 px-12 relative;
     }
@@ -76,6 +78,9 @@
     .social-network-span{
         @apply  absolute text-[#ffffff] text-lg uppercase scale-0 transition-all duration-500 delay-0 group-hover:scale-100 group-hover:delay-200;
     }
+
+
+    /*SECTION ABOUT*/
 
     .skills{
         @apply relative grid place-items-center w-36 h-36;
@@ -142,18 +147,63 @@
         transform: rotateY(30deg) skewY(-24deg) translateY(80px) ;
     }
 
-    .glitch{
-        @apply after:glitch-move after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:block after:animate-glitch;
-    }
+                 /*--------SECTION PORFOLIO----------------*/
 
-    .glitch-move{
-        --move1: inset(50% 50% 50% 50%);
-        --move2: inset(31% 0 40% 0);
-        --move3: inset(39% 0 15% 0);
-        --move4: inset(45% 0 40% 0);
-        --move5: inset(45% 0 6% 0);
-        --move6: inset(14% 0 61% 0);
-        clip-path: var(--move1);
+
+     .card{
+        @apply overflow-visible w-[432px] h-[288px];
+     }            
+
+     .content{
+        @apply w-full h-full transform-card transition-transform duration-500 shadow-[0_0px_10px_1px_#000000ee] rounded-md;
+     }
+
+     .transform-card{
+        transform-style:preserve-3d;
+     }
+
+     .front, .back{
+        @apply  absolute  w-full h-full backface-hidden rounded-md overflow-hidden;
+     }
+
+     .backface-hidden{
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;        
+        -ms-backface-visibility: hidden;
+     }
+
+     .back{
+        @apply w-full h-full flex justify-center items-center overflow-hidden 
+        before:absolute  before:block before:w-[160px] before:h-[190%]  before:bg-[#A5C5E9] before:animate-spin before:animate-rotation; 
+     } 
+
+     .back-content{
+        @apply absolute w-[98%] h-[98%] bg-[#151515] text-white rounded-md flex flex-col justify-center items-center gap-[30px];
+     }
+
+   
+
+     .rotate-card{
+        transform: rotateY(180deg);
+     }
+
+     .front{
+        @apply rotate-card text-white;
+     }
+
+     .front .front-content {
+        @apply absolute w-full h-full flex flex-col justify-between;
+     }
+
+     .description{
+        @apply  w-full h-full rounded-md p-5 bg-[#070229b7] ;
+     }
+    .title-card{
+        @apply w-full h-full rounded-md p-5 bg-[#070229b7] flex items-center justify-center;
     }
+     .btn-card{
+        @apply w-full h-full bg-body rounded-xl text-[#A5C5E9] border-[1px]  border-white text-center pt-2 transition-all duration-300 hover:scale-105;
+     }
 }
 

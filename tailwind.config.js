@@ -6,7 +6,9 @@ export default {
       animation: {
         skills: "giro 8s linear infinite",
         wave: "wave 1s ease-in-out infinite",
-        glitch: "glitch 5s ease-in-out infinite",
+        rotation: "rotation 5000ms infinite linear",
+        card: "card 500ms ease-in-out",
+        reverse: "cardReverse 500ms ease-in-out",
       },
       keyframes: {
         giro: {
@@ -25,60 +27,28 @@ export default {
             marginBottom: "10px",
           },
         },
-        glitch: {
+        rotation: {
+          "o%": {
+            transform: "rotateZ(0deg)",
+          },
           "0%": {
-            "clip-path": "var(--move1)",
-            transform: "translate(0px,-10px)",
+            transform: "rotateZ(360deg)",
           },
-
-          " 10%": {
-            "clip-path": "var(--move2)",
-            transform: "translate(-10px,10px)",
+        },
+        card: {
+          "0%": {
+            transform: "translateX(-500px)",
           },
-
-          " 20%": {
-            "clip-path": "var(--move3)",
-            transform: "translate(10px,0px)",
-          },
-
-          "30%": {
-            "clip-path": "var(--move4)",
-            transform: "translate(-10px,10px)",
-          },
-
-          "40% ": {
-            "clip-path": "var(--move5)",
-            transform: "translate(10px,-10px)",
-          },
-
-          "50%": {
-            "clip-path": "var(--move6)",
-            transform: "translate(-10px,10px)",
-          },
-
-          "60% ": {
-            "clip-path": "var(--move1)",
-            transform: "translate(10px,-10px)",
-          },
-
-          "70% ": {
-            "clip-path": "var(--move3)",
-            transform: "translate(-10px,10px)",
-          },
-
-          "80% ": {
-            "clip-path": "var(--move2)",
-            transform: "translate(10px,-10px)",
-          },
-
-          "90% ": {
-            "clip-path": "var(--move4)",
-            transform: "translate(-10px,10px)",
-          },
-
           "100%": {
-            "clip-path": "var(--move1)",
-            transform: " translate(0)",
+            transform: "translateX(0px)",
+          },
+        },
+        cardReverse: {
+          "0%": {
+            transform: "translateX(500px)",
+          },
+          "100%": {
+            transform: "translateX(0px)",
           },
         },
       },
