@@ -17,59 +17,31 @@
       <nav class="">
         <ul class="flex gap-5 text-2xl">
           <li>
-            <a href="#hero-section" class="under-line-nav">Casa</a>
+            <a href="#hero-section" id="hero" class="under-line-nav">Casa</a>
           </li>
           <li>
-            <a href="#about" class="under-line-nav">Acerca de</a>
+            <a href="#about" id="about-me" class="under-line-nav">Acerca de</a>
           </li>
-          <li><a href="#portfolio" class="under-line-nav">Portafolio</a></li>
-          <li><a href="#contact" class="under-line-nav">Contacto</a></li>
+          <li><a href="#portfolio" id="me-portfolio" class="under-line-nav">Portafolio</a></li>
+          <li><a href="#contact" id="contact-me" class="under-line-nav">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <ul class="fixed top-1/2 -translate-y-1/2 left-5 flex flex-col gap-4">
-        <li class="social-network group" style="--i: #343a40; --j: #000000">
-         
-          <span class="absolute"
-            ><i class="fa-brands fa-github social-network-icon"></i
-          ></span>
-          <a href="https://github.com/WIKILLIX" target="_blank" class="social-network-span">Github</a>
-        </li>
-        <li class="social-network group" style="--i: #75aaff; --j: #1d4380">
-          <span class="absolute"
-            ><i class="fa-brands fa-linkedin social-network-icon"></i
-          ></span>
-          <a href="https://www.linkedin.com/in/brayan-pacheco-jimenez-694b70238/" target="_blank" class="social-network-span">Linkedin</a>
-        </li>
-        <li class="social-network group" style="--i: #4d9944; --j: #5ec3d4">
-          <span class="absolute"
-            ><i class="fa-brands fa-whatsapp social-network-icon"></i
-          ></span>
-          <a href="https://wa.me/573156265674" target="_blank" class="social-network-span">Whatsapp</a>
-        </li>
-      </ul>
-
-      <section class="" id="hero-section">
+    <main id="main">
+      
+      <section class="bg-[url('/src/imgs/leonardo_3.jpg')] bg-cover bg-fixed relative " id="hero-section">
         <div
-          class="max-w-7xl h-[93vh] mx-auto grid  items-center"
+          class="max-w-7xl h-[93vh] mx-auto grid  items-center before:absolute before:w-screen before:h-screen before:left-0  before:bg-[#07022894]"
         >
-          <div class="justify-self-center ">
-            <h1 class="text-[3rem] mb-10">HOLA, MI NOMBRE ES BRAYAN</h1>
+          <div class="justify-self-center z-50  ">
+            <h1 class="text-5xl mb-10 font-semibold">HOLA, MI NOMBRE ES BRAYAN</h1>
 
             <div class="w-[30rem] h-[5rem] overflow-auto">
-              <h3 class="text-2xl">Y soy <span class="text-2xl text-presentation font-bold"></span></h3>
+              <h3 class="text-3xl">y soy <span class="text-3xl text-presentation font-bold"></span></h3>
               
             </div>
           </div>
-          <!-- <div class="">
-            <img
-              src="src/imgs/fondo_hero_2_op_reduce_.webp"
-              class="w-full h-full"
-              alt=""
-            />
-          </div> -->
         </div>
       </section>
       <section id="about" class="pt-20">
@@ -89,7 +61,7 @@
             </ul>
           </div>
           <div class="col-span-full flex justify-center items-center relative">
-            <h2 class="absolute -top-7 left-0 titule-secondary">Habilidades</h2>
+            <h2 class="absolute -top-7 left-0 titule-secondary" id="skills">Habilidades</h2>
             
             <ul class="flex items-center justify-between w-full  ">
               <li style="--color:#ffdf00" class="skills">
@@ -145,9 +117,10 @@
             </ul>
           </div>
         </div>
+        
       </section>
       <section id="portfolio" class="pt-20">
-        <div class="h-screen max-w-[75vw] mx-auto">
+        <div class=" max-w-[75vw] mx-auto">
           <h2 class="titule-secondary text-2xl mb-10">portafolio</h2>
           <div class="grid grid-cols-3 grid-rows-2 justify-between gap-y-14 w-full h-11/12">
             <article>
@@ -242,9 +215,41 @@
           </div>
         </div>
       </section>
-      <section id="contact">
-        <div class="h-screen pt-20 bg-[#A5C5E9]"></div>
+      <section id="contact" class="bg-[#A5C5E9]">
+        <div class="h-72 max-w-[75vw] mx-auto  pb-10 flex justify-between items-center">
+          <h2 class="titule-secondary text-[#070228]">contactame</h2>
+          <ul class="flex gap-4">
+            <li class="social-network group" style="--i: #4d9944; --j: #5ec3d4">
+              <span class="absolute"
+                ><i class="fa-brands fa-whatsapp social-network-icon"></i
+              ></span>
+              <a href="https://wa.me/573156265674" target="_blank" class="social-network-span">Whatsapp</a>
+            </li>
+            <li class="social-network group" style="--i: #75aaff; --j: #1d4380">
+              <span class="absolute"
+                ><i class="fa-brands fa-linkedin social-network-icon"></i
+              ></span>
+              <a href="https://www.linkedin.com/in/brayan-pacheco-jimenez-694b70238/" target="_blank" class="social-network-span">Linkedin</a>
+            </li>
+            <li class="social-network group" style="--i: #343a40; --j: #000000">
+              <span class="absolute"
+                ><i class="fa-brands fa-github social-network-icon"></i
+              ></span>
+              <a href="https://github.com/WIKILLIX" target="_blank" class="social-network-span">Github</a>
+            </li>
+            <li class="social-network group" style="--i: #2f828b; --j: #41b3be">
+              <span class="absolute"
+                ><i class="fa-sharp fa-solid fa-envelope social-network-icon"></i></span>
+              <a href="mailto:ry.2585a@gmail.com" class="social-network-span ">Email</a>
+            </li>
+          </ul>
+        </div>
       </section>
+      <footer class="bg-[#A5C5E9]">
+        <div class="h-full max-w-[75vw] mx-auto pt-10 pb-10 grid place-content-center">
+          <h3 class="text-[#070228] text-sm">&COPY;2023 Brayan Pacheco, Todos los derechos reservados</h3>
+        </div>
+      </footer>
     </main>
     <script
       src="https://kit.fontawesome.com/ed5500335a.js"

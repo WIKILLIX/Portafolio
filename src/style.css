@@ -27,6 +27,15 @@
         background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,2,51,1) 50%, rgba(0,0,0,1) 100%);
     }
     
+    /*HEADER ACTIVE*/
+    .header-active{
+        @apply inline-block text-xl
+        text-[#ffffff] relative 
+        before:-bottom-0.5 before:left-0 before:absolute before:h-0.5 before:bg-[#ffffff] before:w-full;
+    }
+
+
+
 
     /* HEADER*/
     .header {
@@ -45,13 +54,20 @@
     }
 
     .under-line-nav{
-        @apply inline-block text-xl transition-all duration-300 hover:text-[#ffffff] relative after:-bottom-0.5 after:left-0 after:absolute after:w-0 after:h-0.5 after:bg-[#ffffff] after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-500 after:transition-[width,left] hover:after:w-full hover:after:left-0
+        @apply inline-block text-xl transition-all duration-300 
+        hover:text-[#ffffff] relative 
+        after:-bottom-0.5 after:left-0 after:absolute after:w-0 after:h-0.5 after:bg-[#ffffff] after:ease-[cubic-bezier(0.25,0.8,0.25,1)] 
+        after:duration-500 after:transition-[width,left] hover:after:w-full hover:after:left-0;
     }
 
 
     /* REDES SOCIALES*/
     .social-network {
-        @apply relative w-14 h-14 rounded-[60px] cursor-pointer flex justify-center items-center shadow-[0_5px_12px_#A5C5E9] transition-all duration-500 social-network-hover social-network-before social-network-hover-before social-network-after;
+        @apply relative w-14 h-14 rounded-[60px] 
+        cursor-pointer flex justify-center items-center 
+        shadow-[0_5px_12px_#070228] transition-all duration-500 
+        social-network-hover social-network-before 
+        social-network-hover-before social-network-after;
     }
     .social-network-hover{
       @apply  hover:w-[10rem] hover:shadow-[0_10px_25px_rgba(0,0,0,0)] ;
@@ -72,11 +88,11 @@
     }
 
     .social-network-icon{
-        @apply text-[#A5C5E9] text-3xl transition-all delay-200 group-hover:scale-0 group-hover:text-4xl group-hover:delay-200;
+        @apply text-[#070228] text-3xl transition-all delay-200 group-hover:scale-0 group-hover:text-4xl group-hover:delay-200;
     }
 
     .social-network-span{
-        @apply  absolute text-[#ffffff] text-lg uppercase scale-0 transition-all duration-500 delay-0 group-hover:scale-100 group-hover:delay-200;
+        @apply  absolute text-[#ffffff] text-lg uppercase w-40 h-14 text-center pt-[14px] scale-0 transition-all duration-500 delay-0 group-hover:scale-100 group-hover:delay-200;
     }
 
 
