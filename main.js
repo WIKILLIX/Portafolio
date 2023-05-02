@@ -29,7 +29,7 @@ observer.observe(elemento);
 //agrega la clase header-active al header basado en la section en la que se encuentre el usuario
 
 const options = {
-  threshold: 0.6,
+  threshold: 0.5,
 };
 const activeSections = (entries) => {
   entries.forEach((entry) => {
@@ -49,6 +49,7 @@ const observerSections = new IntersectionObserver(activeSections, options);
 sections.forEach((section) => observerSections.observe(section));
 
 //efecto maquina de escribir
+
 const typed = new Typed(".text-presentation", {
   strings: ["web developer", "fullstack", "freelance"],
   typeSpeed: 50,
