@@ -12,10 +12,46 @@
         margin: 0;
         box-sizing: border-box;
         font-family: 'roboto', serif;
+        overflow-x: hidden
     }
 }
 
 @layer components{
+
+    /*LOADER*/
+    .wrapper{
+        @apply w-[200px] h-[60px] relative z-10; 
+    }
+    .circle{
+        @apply w-5 h-5 absolute rounded-[50%] bg-[#fff] left-[15%] origin-[50%] animate-loader ;
+    }
+
+    .circle:nth-child(2) {
+        left: 45%;
+        animation-delay: .2s;
+    }
+      
+    .circle:nth-child(3) {
+        left: auto;
+        right: 15%;
+        animation-delay: .3s;
+      }
+    .shadow{
+        @apply w-5 h-1 rounded-[50%] bg-white absolute top-16 origin-[50%] z-[-1] left-[15%] blur-sm animate-shadowLoader;
+    }  
+     
+    .shadow:nth-child(4) {
+        left: 45%;
+        animation-delay: .2s
+      }
+      
+    .shadow:nth-child(5) {
+        left: auto;
+        right: 15%;
+        animation-delay: .3s;
+      }
+
+
 
     .titule-secondary{
         @apply font-semibold text-2xl tracking-wider uppercase;
@@ -30,12 +66,9 @@
     /*HEADER ACTIVE*/
     .header-active{
         @apply inline-block text-xl
-        text-[#ffffff] relative 
+        text-[#ffffff] max-md:text-[#070228] max-md:scale-105 relative max-md:before:bg-[#070228]
         before:-bottom-0.5 before:left-0 before:absolute before:h-0.5 before:bg-[#ffffff] before:w-full;
     }
-
-
-
 
     /* HEADER*/
     .header {
@@ -48,13 +81,18 @@
         background: -moz-linear-gradient(360deg,#000000c6 10%, #05011bfa 50%, #000000f1);
     }
   
+    .bg-section-hero{
+        @apply before:absolute before:h-screen before:w-screen before:bg-[url('/src/imgs/leonardo_3.webp')] before:top-0 before:bg-contain before:bg-fixed before:bg-center max-[1580px]:before:bg-cover max-[1126px]:before:bg-right
+        after:absolute after:w-screen after:h-screen after:left-0 after:top-0 after:bg-[#07022894];
+    }
+
 
     .header-fixed {
         @apply  fixed bg-header-fixed top-0 ;
     }
 
     .under-line-nav{
-        @apply inline-block text-xl transition-all duration-300 
+        @apply inline-block text-xl max-md:text-4xl max-md:font-semibold transition-all duration-300 
         hover:text-[#ffffff] relative 
         after:-bottom-0.5 after:left-0 after:absolute after:w-0 after:h-0.5 after:bg-[#ffffff] after:ease-[cubic-bezier(0.25,0.8,0.25,1)] 
         after:duration-500 after:transition-[width,left] hover:after:w-full hover:after:left-0;
@@ -97,6 +135,13 @@
 
 
     /*SECTION ABOUT*/
+
+    .section-about{
+        @apply h-screen grid grid-cols-2 grid-rows-[minmax(430px,1fr)_minmax(350px,_430px)] 
+        max-[1116px]:grid-rows-[500px_390px_470px] max-[1116px]:grid-cols-1 max-w-[75vw] 
+        max-[1550px]:max-w-[90vw] mx-auto gap-5 max-[1116px]:gap-1 max-[1140px]:h-auto 
+        max-[590px]:grid-rows-[330px_400px_720px] max-[650px]:grid-rows-[330px_400px_720px];
+    }
 
     .skills{
         @apply relative grid place-items-center w-36 h-36;
@@ -167,7 +212,7 @@
 
 
      .card{
-        @apply overflow-visible w-[432px] h-[288px];
+        @apply overflow-visible w-[432px] h-[288px] max-[480px]:w-[340px] max-[480px]:h-[220px];
      }            
 
      .content{

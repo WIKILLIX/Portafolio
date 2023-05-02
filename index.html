@@ -6,206 +6,464 @@
     <link rel="stylesheet" href="./dist/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- 
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Portafolio Brayan</title>
   </head>
-  <body class="relative text-lg text-[#A5C5E9] bg-body">
-    <div class="absolute h-20" id="header-false"></div>
-    <header class="header z-50" id="header">
+  <body class="text-lg text-[#A5C5E9] bg-body overflow-x-hidden">
+    <div class="absolute h-20 w-full" id="header-false"></div>
+    <div class="h-screen w-screen flex justify-center items-center" id="loader">
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+    <header class="header z-[100]" id="header">
       <p class="logo text-2xl uppercase">Devfolio</p>
-      <nav class="">
-        <ul class="flex gap-5 text-2xl">
+      <nav
+        class="transition-all duration-500 max-md:absolute max-md:h-screen max-md:w-screen max-md:bg-[#a5c5e9f7] max-md:top-0 max-md:left-0 max-md:text-[#070228] max-md:flex max-md:justify-center max-md:items-center max-md:scale-0"
+      >
+        <ul class="flex gap-5 max-md:flex-col max-md:gap-20 max-md:text-center">
           <li>
             <a href="#hero-section" id="hero" class="under-line-nav">Casa</a>
           </li>
           <li>
             <a href="#about" id="about-me" class="under-line-nav">Acerca de</a>
           </li>
-          <li><a href="#portfolio" id="me-portfolio" class="under-line-nav">Portafolio</a></li>
-          <li><a href="#contact" id="contact-me" class="under-line-nav">Contacto</a></li>
+          <li>
+            <a href="#portfolio" id="me-portfolio" class="under-line-nav"
+              >Portafolio</a
+            >
+          </li>
+          <li>
+            <a href="#contact" id="contact-me" class="under-line-nav"
+              >Contacto</a
+            >
+          </li>
         </ul>
       </nav>
-    </header>
-
-    <main id="main">
-      
-      <section class="bg-[url('/src/imgs/leonardo_3.jpg')] bg-cover bg-fixed relative " id="hero-section">
-        <div
-          class="max-w-7xl h-[93vh] mx-auto grid  items-center before:absolute before:w-screen before:h-screen before:left-0  before:bg-[#07022894]"
+      <div class="hidden max-md:block z-50" id="btn-menu">
+        <button class="text-3xl" id="open-menu" aria-label="abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button
+          class="text-4xl text-black hidden"
+          id="close-menu"
+          aria-label="cerrar menu"
         >
-          <div class="justify-self-center z-50  ">
-            <h1 class="text-5xl mb-10 font-semibold">HOLA, MI NOMBRE ES BRAYAN</h1>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </header>
+    <main id="main" class="bg-section-hero overflow-hidden">
+      <section id="hero-section">
+        <div
+          class="max-w-7xl h-[93vh] mx-auto flex justify-center items-center max-[750px]:p-x-5"
+        >
+          <div class="z-50 max-[750px]:text-center">
+            <h1 class="text-5xl mb-10 font-semibold max-[750px]:text-3xl">
+              HOLA, <br class="" />
+              MI NOMBRE ES BRAYAN
+            </h1>
 
             <div class="w-[30rem] h-[5rem] overflow-auto">
-              <h3 class="text-3xl">y soy <span class="text-3xl text-presentation font-bold"></span></h3>
-              
+              <h2 class="text-3xl max-[750px]:text-xl">
+                y soy <span class="text-presentation font-bold"></span>
+              </h2>
             </div>
           </div>
         </div>
       </section>
-      <section id="about" class="pt-20">
-        <div class="h-screen grid grid-cols-2 grid-rows-[minmax(430px,1fr)_minmax(350px,_430px)] max-w-[75vw] mx-auto gap-5">
-          <div class=" overflow-hidden border-4 border-white max-h-[470px] mb-10 ">
-            <img src="./src/imgs/perfil dibujo.webp" alt="" class=" h-full mx-auto ">
+      <section
+        id="about"
+        class="pt-20 max-[1116px]:pt-2 max-[1116px]:mb-32 max-[650px]:mb-24"
+      >
+        <div class="section-about">
+          <div
+            class="overflow-hidden border-4 border-white max-h-[470px] mb-10 max-[1116px]:mb-0 max-[590px]:h-80"
+          >
+            <img
+              src="./src/imgs/perfil dibujo.webp"
+              alt="imagen de perfil del desarrollador web"
+              class="h-full mx-auto object-scale-down"
+            />
           </div>
-          <div class="pl-10 flex flex-col gap-5" >
-            <h2 class="titule-secondary mb-2">Acerca de mi</h2>
-            <p>Como apasionado y experimentado desarrollador fullstack con una gran dedicación en la creación de aplicaciones web complejas y responsivas, siempre he sentido un gran interés por los números, la lógica y la lectura.</p>
-             <p> Desde que comencé a trabajar en este campo, me he dado cuenta de que puedo llevar mis habilidades de análisis a un nivel superior, al resolver problemas y desafíos tanto para empresas como para particulares a través del desarrollo de software.
+          <div
+            class="pl-10 max-[1116px]:pl-0 flex flex-col gap-5 max-[1016px]:gap-2 max-[460px]:gap-1"
+          >
+            <h2
+              class="titule-secondary mb-2 max-[654px]:mb-1 max-[654px]:text-base"
+            >
+              Acerca de mi
+            </h2>
+            <p class="max-[654px]:text-base">
+              Como apasionado y experimentado desarrollador fullstack con una
+              gran dedicación en la creación de aplicaciones web complejas y
+              responsivas, siempre he sentido un gran interés por los números,
+              la lógica y la lectura.
             </p>
-            <ul class="mt-14">
-              <li class="mb-4"><i class="fa-sharp fa-regular fa-greater-than fa-beat"></i>  Ciudad: Bogota, Colombia</li>
-              <li class="mb-4"><i class="fa-sharp fa-regular fa-greater-than fa-beat"></i>  Frelance: Disponible</li>
-              <li><i class="fa-sharp fa-regular fa-greater-than fa-beat"></i><a href="#"> CV</a></li>
+            <p class="max-[654px]:text-base">
+              Desde que comencé a trabajar en este campo, me he dado cuenta de
+              que puedo llevar mis habilidades de análisis a un nivel superior,
+              al resolver problemas y desafíos tanto para empresas como para
+              particulares a través del desarrollo de software.
+            </p>
+            <ul
+              class="mt-14 max-[1514px]:mt-5 max-[1154px]:mt-1 max-[654px]:text-base"
+            >
+              <li class="mb-4 max-[1154px]:mb-1">
+                <i class="fa-sharp fa-regular fa-greater-than fa-beat"></i>
+                Ciudad: Bogota, Colombia
+              </li>
+              <li class="mb-4 max-[1154px]:mb-1">
+                <i class="fa-sharp fa-regular fa-greater-than fa-beat"></i>
+                Frelance: Disponible
+              </li>
+              <li>
+                <i class="fa-sharp fa-regular fa-greater-than fa-beat"></i
+                ><a href="#"> CV</a>
+              </li>
             </ul>
           </div>
-          <div class="col-span-full flex justify-center items-center relative">
-            <h2 class="absolute -top-7 left-0 titule-secondary" id="skills">Habilidades</h2>
-            
-            <ul class="flex items-center justify-between w-full  ">
-              <li style="--color:#ffdf00" class="skills">
+          <div class="col-span-full flex items-center relative">
+            <h2
+              class="absolute -top-7 left-0 titule-secondary"
+              id="forObserver"
+            >
+              Habilidades
+            </h2>
+            <ul
+              class="flex items-center justify-between w-full max-[1116px]:grid max-[1116px]:grid-rows-2 max-[1116px]:grid-cols-3 max-[1116px]:mt-52 max-[1116px]:gap-y-36 max-[650px]:grid-rows-3 max-[650px]:grid-cols-2"
+            >
+              <li
+                style="--color: #ffdf00"
+                class="skills max-[1140px]:justify-self-center"
+              >
                 <span class="base"></span>
                 <span class="title">Javascript</span>
                 <span class="icon">
-                    <i class="fa-brands fa-square-js"></i></li>
+                  <i class="fa-brands fa-square-js"></i>
                 </span>
-                <span class="level drop-shadow-[0_0_2px_#ffdf00]">intermedio</span>
-                <li style="--color:#44a8b3" class="skills">
-                  <span class="base"> </span>
-                  <span class="title">Tailwind</span>
-                  <span class="icon"><img src="./src/imgs/tailwind.svg" class="w-20" alt="" ></span>
-                  <span class="level drop-shadow-[0_0_2px_#44a8b3]">intermedio</span>
-                </li >
-              <!-- <li style="--color:#f05033" class="skills">
+                <span class="level drop-shadow-[0_0_2px_#ffdf00]"
+                  >intermedio</span
+                >
+              </li>
+              <li
+                style="--color: #44a8b3"
+                class="skills max-[1140px]:justify-self-center"
+              >
                 <span class="base"> </span>
-                <span class="title">Git</span>
-                <span class="icon"><i class="fa-brands fa-git-alt"></i></span>
-                <span class="level drop-shadow-[0_0_2px_#f05033]">intermedio</span>
-              </li >
-              <li style="--color:#A5C5E9" class="skills">
-                <span class="base"> </span>
-                <span class="title">Github</span>
-                <span class="icon"><i class="fa-brands fa-github"></i></span>
-                <span class="level drop-shadow-[0_0_2px_#A5C5E9]">intermedio</span>
-              </li> -->
-             
-              <li style="--color:#ba0c0d" class="skills">
+                <span class="title">Tailwind</span>
+                <span class="icon"
+                  ><img src="./src/imgs/tailwind.svg" class="w-20" alt=""
+                /></span>
+                <span class="level drop-shadow-[0_0_2px_#44a8b3]"
+                  >intermedio</span
+                >
+              </li>
+              <li
+                style="--color: #ba0c0d"
+                class="skills max-[1140px]:justify-self-center"
+              >
                 <span class="base"> </span>
                 <span class="title">Java</span>
                 <span class="icon"><i class="fa-brands fa-java"></i></span>
-                <span class="level drop-shadow-[0_0_2px_#ba0c0d]">intermedio</span>
+                <span class="level drop-shadow-[0_0_2px_#ba0c0d]"
+                  >intermedio</span
+                >
               </li>
-              <li style="--color:#3fb984" class="skills">
+              <li
+                style="--color: #3fb984"
+                class="skills max-[1140px]:justify-self-center"
+              >
                 <span class="base"> </span>
                 <span class="title">Vue 3</span>
                 <span class="icon"><i class="fa-brands fa-vuejs"></i></span>
-                <span class="level drop-shadow-[0_0_2px_#3fb984]">intermedio</span>
+                <span class="level drop-shadow-[0_0_2px_#3fb984]"
+                  >intermedio</span
+                >
               </li>
-              <li style="--color:#ff5722" class="skills">
+              <li
+                style="--color: #ff5722"
+                class="skills max-[1140px]:justify-self-center"
+              >
                 <span class="base"> </span>
                 <span class="title">html 5</span>
                 <span class="icon"><i class="fa-brands fa-html5"></i></span>
-                <span class="level drop-shadow-[0_0_2px_#ff5722]">avanzado</span>
+                <span class="level drop-shadow-[0_0_2px_#ff5722]"
+                  >avanzado</span
+                >
               </li>
-              <li style="--color:#264de4" class="skills">
+              <li
+                style="--color: #264de4"
+                class="skills max-[1140px]:justify-self-center"
+              >
                 <span class="base"> </span>
                 <span class="title">css 3</span>
                 <span class="icon"><i class="fa-brands fa-css3"></i></span>
-                <span class="level drop-shadow-[0_0_2px_#264de4]">intermedio</span>
+                <span class="level drop-shadow-[0_0_2px_#264de4]"
+                  >intermedio</span
+                >
               </li>
             </ul>
           </div>
         </div>
-        
       </section>
-      <section id="portfolio" class="pt-20">
-        <div class=" max-w-[75vw] mx-auto">
-          <h2 class="titule-secondary text-2xl mb-10">portafolio</h2>
-          <div class="grid grid-cols-3 grid-rows-2 justify-between gap-y-14 w-full h-11/12">
-            <article>
+      <section id="portfolio" class="pt-20 max-[982px]:mb-5">
+        <div
+          class="max-w-[75vw] max-[1774px]:max-w-[90vw] mx-auto h-screen max-[982px]:h-auto"
+        >
+          <h2 class="titule-secondary text-2xl mb-20 max-[1116px]:mb-5" id="">
+            portafolio
+          </h2>
+          <div
+            class="grid grid-cols-3 grid-rows-2 justify-between gap-y-14 w-full h-11/12 max-[1478px]:grid-cols-2 max-[982px]:grid-cols-1 max-[982px]:grid-rows-4"
+          >
+            <article class="max-[1478px]:justify-self-center">
               <div class="card group">
                 <div class="content group-hover:rotate-card">
                   <div class="back">
-                    <div class="back-content bg-[url('/src/imgs/encriptador.webp')] bg-cover "> 
+                    <div
+                      class="back-content bg-[url('/src/imgs/encriptador.webp')] bg-cover"
+                    >
                       <div class="title-card">
                         <p class="titule-secondary">Encriptador</p>
                       </div>
                     </div>
                   </div>
-                  <div class="front bg-[url('/src/imgs/encriptador.webp')] bg-cover">
+                  <div
+                    class="front bg-[url('/src/imgs/encriptador.webp')] bg-cover"
+                  >
                     <div class="front-content">
-                      <div class="description flex flex-col justify-around group">
-                          <div class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card" >
-                            <i class="fa-brands fa-square-js text-5xl text-[#ffdf00]"></i>
-                            <span class=""><img src="./src/imgs/tailwind.svg" class="w-20 h-20" alt="" ></span>
-                            <i class="fa-brands fa-html5 text-5xl text-[#ff5722]"></i>
-                            <i class="fa-brands fa-css3 text-5xl text-[#264de4]"></i>
-                          </div>
-                          <div class="flex  gap-5 h-12 group-hover:animate-reverse">
-                            <a href="https://www.google.com.co/" target="_blank" class="btn-card">Pagina web <i class="fa fa-external-link-alt"></i></a>
-                            <a href="https://www.google.com.co/" target="_blank" class="btn-card">Github <i class="fa fa-external-link-alt"></i></a>
-                          </div> 
+                      <div
+                        class="description flex flex-col justify-around group"
+                      >
+                        <div
+                          class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card"
+                        >
+                          <i
+                            class="fa-brands fa-square-js text-5xl text-[#ffdf00]"
+                          ></i>
+                          <span class=""
+                            ><img
+                              src="./src/imgs/tailwind.svg"
+                              class="w-20 h-20"
+                              alt=""
+                          /></span>
+                          <i
+                            class="fa-brands fa-html5 text-5xl text-[#ff5722]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-css3 text-5xl text-[#264de4]"
+                          ></i>
+                        </div>
+                        <div
+                          class="flex gap-5 h-12 group-hover:animate-reverse"
+                        >
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Pagina web <i class="fa fa-external-link-alt"></i
+                          ></a>
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Github <i class="fa fa-external-link-alt"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </article>
-            <article>
+            <article class="max-[1478px]:justify-self-center">
               <div class="card group">
                 <div class="content group-hover:rotate-card">
                   <div class="back">
-                    <div class="back-content bg-[url('/src/imgs/portafolio.webp')] bg-cover "> 
+                    <div
+                      class="back-content bg-[url('/src/imgs/portafolio.webp')] bg-cover"
+                    >
                       <div class="title-card">
                         <p class="titule-secondary">Portafolio</p>
                       </div>
                     </div>
                   </div>
-                  <div class="front bg-[url('/src/imgs/portafolio_2.webp')] bg-cover">
+                  <div
+                    class="front bg-[url('/src/imgs/portafolio_2.webp')] bg-cover"
+                  >
                     <div class="front-content">
-                      <div class="description flex flex-col justify-around group">
-                          <div class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card" >
-                            <i class="fa-brands fa-square-js text-5xl text-[#ffdf00]"></i>
-                            <span class=""><img src="./src/imgs/tailwind.svg" class="w-20 h-20" alt="" ></span>
-                            <i class="fa-brands fa-html5 text-5xl text-[#ff5722]"></i>
-                            <i class="fa-brands fa-css3 text-5xl text-[#264de4]"></i>
-                          </div>
-                          <div class="flex  gap-5 h-12 group-hover:animate-reverse">
-                            <a href="https://www.google.com.co/" target="_blank" class="btn-card bg-[#A5C5E9] ">Pagina web <i class="fa fa-external-link-alt"></i></a>
-                            <a href="https://www.google.com.co/" target="_blank" class="btn-card">Github <i class="fa fa-external-link-alt"></i></a>
-                          </div> 
+                      <div
+                        class="description flex flex-col justify-around group"
+                      >
+                        <div
+                          class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card"
+                        >
+                          <i
+                            class="fa-brands fa-square-js text-5xl text-[#ffdf00]"
+                          ></i>
+                          <span class=""
+                            ><img
+                              src="./src/imgs/tailwind.svg"
+                              class="w-20 h-20"
+                              alt=""
+                          /></span>
+                          <i
+                            class="fa-brands fa-html5 text-5xl text-[#ff5722]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-css3 text-5xl text-[#264de4]"
+                          ></i>
+                        </div>
+                        <div
+                          class="flex gap-5 h-12 group-hover:animate-reverse"
+                        >
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card bg-[#A5C5E9]"
+                            >Pagina web <i class="fa fa-external-link-alt"></i
+                          ></a>
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Github <i class="fa fa-external-link-alt"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </article>
-            <article>
+            <article class="max-[1478px]:justify-self-center">
               <div class="card group">
                 <div class="content group-hover:rotate-card">
                   <div class="back">
-                    <div class="back-content bg-cover "> 
+                    <div class="back-content bg-cover">
                       <div class="title-card">
                         <p class="titule-secondary">pqrs</p>
                       </div>
                     </div>
                   </div>
-                  <div class="front ">
+                  <div class="front">
                     <div class="front-content">
-                      <div class="description flex flex-col justify-around group">
-                          <div class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card" >
-                            <i class="fa-brands fa-square-js text-5xl text-[#ffdf00]"></i>
-                            <span class=""><img src="./src/imgs/tailwind.svg" class="w-20 h-20" alt="" ></span>
-                            <i class="fa-brands fa-html5 text-5xl text-[#ff5722]"></i>
-                            <i class="fa-brands fa-css3 text-5xl text-[#264de4]"></i>
-                            <i class="fa-brands fa-java text-5xl text-[#ba0c0d]"></i>
-                            <i class="fa-brands fa-vuejs text-5xl text-[#3fb984]"></i>
-                          </div>
-                          <div class="flex  gap-5 h-12 group-hover:animate-reverse">
-                            <a href="https://www.google.com.co/" target="_blank" class="btn-card">Pagina web <i class="fa fa-external-link-alt"></i></a>
-                            <a href="https://www.google.com.co/" target="_blank" class="btn-card">Github <i class="fa fa-external-link-alt"></i></a>
-                          </div> 
+                      <div
+                        class="description flex flex-col justify-around group"
+                      >
+                        <div
+                          class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card"
+                        >
+                          <i
+                            class="fa-brands fa-square-js text-5xl text-[#ffdf00]"
+                          ></i>
+                          <span class=""
+                            ><img
+                              src="./src/imgs/tailwind.svg"
+                              class="w-20 h-20"
+                              alt=""
+                          /></span>
+                          <i
+                            class="fa-brands fa-html5 text-5xl text-[#ff5722]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-css3 text-5xl text-[#264de4]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-java text-5xl text-[#ba0c0d]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-vuejs text-5xl text-[#3fb984]"
+                          ></i>
+                        </div>
+                        <div
+                          class="flex gap-5 h-12 group-hover:animate-reverse"
+                        >
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Pagina web <i class="fa fa-external-link-alt"></i
+                          ></a>
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Github <i class="fa fa-external-link-alt"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="max-[1478px]:justify-self-center">
+              <div class="card group">
+                <div class="content group-hover:rotate-card">
+                  <div class="back">
+                    <div class="back-content bg-cover">
+                      <div class="title-card">
+                        <p class="titule-secondary">Admin panel</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="front-content">
+                      <div
+                        class="description flex flex-col justify-around group"
+                      >
+                        <div
+                          class="flex justify-around items-center flex-wrap gap-5 transition-all group-hover:animate-card"
+                        >
+                          <i
+                            class="fa-brands fa-square-js text-5xl text-[#ffdf00]"
+                          ></i>
+                          <span class=""
+                            ><img
+                              src="./src/imgs/tailwind.svg"
+                              class="w-20 h-20"
+                              alt=""
+                          /></span>
+                          <i
+                            class="fa-brands fa-html5 text-5xl text-[#ff5722]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-css3 text-5xl text-[#264de4]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-java text-5xl text-[#ba0c0d]"
+                          ></i>
+                          <i
+                            class="fa-brands fa-vuejs text-5xl text-[#3fb984]"
+                          ></i>
+                        </div>
+                        <div
+                          class="flex gap-5 h-12 group-hover:animate-reverse"
+                        >
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Pagina web <i class="fa fa-external-link-alt"></i
+                          ></a>
+                          <a
+                            href="https://www.google.com.co/"
+                            target="_blank"
+                            class="btn-card"
+                            >Github <i class="fa fa-external-link-alt"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -216,38 +474,66 @@
         </div>
       </section>
       <section id="contact" class="bg-[#A5C5E9]">
-        <div class="h-72 max-w-[75vw] mx-auto  pb-10 flex justify-between items-center">
-          <h2 class="titule-secondary text-[#070228]">contactame</h2>
+        <div
+          class="h-80 max-w-[75vw] mx-auto pb-10 flex justify-between items-center max-md:flex-col max-md:justify-around"
+        >
+          <h2 class="titule-secondary text-[#070228]" id="title-contact">
+            contactame
+          </h2>
           <ul class="flex gap-4">
             <li class="social-network group" style="--i: #4d9944; --j: #5ec3d4">
               <span class="absolute"
                 ><i class="fa-brands fa-whatsapp social-network-icon"></i
               ></span>
-              <a href="https://wa.me/573156265674" target="_blank" class="social-network-span">Whatsapp</a>
+              <a
+                href="https://wa.me/573156265674"
+                target="_blank"
+                class="social-network-span"
+                >Whatsapp</a
+              >
             </li>
             <li class="social-network group" style="--i: #75aaff; --j: #1d4380">
               <span class="absolute"
                 ><i class="fa-brands fa-linkedin social-network-icon"></i
               ></span>
-              <a href="https://www.linkedin.com/in/brayan-pacheco-jimenez-694b70238/" target="_blank" class="social-network-span">Linkedin</a>
+              <a
+                href="https://www.linkedin.com/in/brayan-pacheco-jimenez-694b70238/"
+                target="_blank"
+                class="social-network-span"
+                >Linkedin</a
+              >
             </li>
             <li class="social-network group" style="--i: #343a40; --j: #000000">
               <span class="absolute"
                 ><i class="fa-brands fa-github social-network-icon"></i
               ></span>
-              <a href="https://github.com/WIKILLIX" target="_blank" class="social-network-span">Github</a>
+              <a
+                href="https://github.com/WIKILLIX"
+                target="_blank"
+                class="social-network-span"
+                >Github</a
+              >
             </li>
             <li class="social-network group" style="--i: #2f828b; --j: #41b3be">
               <span class="absolute"
-                ><i class="fa-sharp fa-solid fa-envelope social-network-icon"></i></span>
-              <a href="mailto:ry.2585a@gmail.com" class="social-network-span ">Email</a>
+                ><i
+                  class="fa-sharp fa-solid fa-envelope social-network-icon"
+                ></i
+              ></span>
+              <a href="mailto:ry.2585a@gmail.com" class="social-network-span"
+                >Email</a
+              >
             </li>
           </ul>
         </div>
       </section>
       <footer class="bg-[#A5C5E9]">
-        <div class="h-full max-w-[75vw] mx-auto pt-10 pb-10 grid place-content-center">
-          <h3 class="text-[#070228] text-sm">&COPY;2023 Brayan Pacheco, Todos los derechos reservados</h3>
+        <div
+          class="h-full max-w-[75vw] mx-auto pt-10 pb-10 grid place-content-center"
+        >
+          <h3 class="text-[#070228] text-sm">
+            &COPY;2023 Brayan Pacheco, Todos los derechos reservados
+          </h3>
         </div>
       </footer>
     </main>

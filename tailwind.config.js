@@ -9,6 +9,8 @@ export default {
         rotation: "rotation 5000ms infinite linear",
         card: "card 500ms ease-in-out",
         reverse: "cardReverse 500ms ease-in-out",
+        loader: "loader 500ms alternate infinite ease",
+        shadowLoader: "shadowLoader 500ms alternate infinite ease",
       },
       keyframes: {
         giro: {
@@ -49,6 +51,39 @@ export default {
           },
           "100%": {
             transform: "translateX(0px)",
+          },
+        },
+        loader: {
+          "0%": {
+            top: "60px",
+            height: "5px",
+            borderRadius: "50px 50px 25px 25px",
+            transform: "scaleX(1.7)",
+          },
+
+          "40%": {
+            height: "20px",
+            borderRadius: "50%",
+            transform: "scaleX(1)",
+          },
+
+          "100%": {
+            top: "0%",
+          },
+        },
+        shadowLoader: {
+          "0%": {
+            transform: "scaleX(1.5)",
+          },
+
+          "40%": {
+            transform: "scaleX(1)",
+            opacity: ".7",
+          },
+
+          "100%": {
+            transform: "scaleX(.2)",
+            opacity: ".4",
           },
         },
       },

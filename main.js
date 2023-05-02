@@ -4,46 +4,49 @@ import Typed from "typed.js";
 const elemento = document.querySelector("#header-false");
 const header = document.querySelector("#header");
 const heroSection = document.querySelector("#hero-section");
-const skills = document.querySelector("#skills");
-const aboutMe = document.querySelector("#about-me");
+const sections = document.querySelectorAll("section");
+const links = document.querySelectorAll("nav a");
+const openMenu = document.querySelector("#open-menu");
+const closeMenu = document.querySelector("#close-menu");
+const nav = document.querySelector("nav");
+const loader = document.querySelector("#loader");
+
+//mantiene el loader hasta que la pagina carga
+window.addEventListener("load", () => {
+  loader.classList.add("hidden");
+});
+
 // valida si el nav sale de la vista del usuario o vuelve a entrar a la vista
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      header.classList.add("header");
-      header.classList.remove("header-fixed");
-      heroSection.classList.remove("pt-20");
-    } else {
-      header.classList.add("header-fixed");
-      heroSection.classList.add("pt-20");
-    }
+    header.classList.toggle("header-fixed", !entry.isIntersecting);
+    heroSection.classList.toggle("pt-20", !entry.isIntersecting);
   });
 });
 
 observer.observe(elemento);
 // header-active
-//agrega la clase header-active al header basado en la sectin en la que se encuentre el usuario
-let options = {
-  root: document.querySelector("#main"),
-  rootMargin: "0px",
-  threshold: 1.0,
+//agrega la clase header-active al header basado en la section en la que se encuentre el usuario
+
+const options = {
+  threshold: 0.6,
 };
-
-let observerMain = new IntersectionObserver(callback, options);
-
-var callback = function (entries, observer) {
+const activeSections = (entries) => {
   entries.forEach((entry) => {
-    // Cada entry describe un cambio en la intersección para
-    // un elemento observado
-    //   entry.boundingClientRect
-    //   entry.intersectionRatio
-    //   entry.intersectionRect
-    //   entry.isIntersecting
-    //   entry.rootBounds
-    //   entry.target
-    //   entry.time
+    if (entry.isIntersecting) {
+      links.forEach((link) => {
+        link.classList.toggle(
+          "header-active",
+          link.href.includes(entry.target.id)
+        );
+      });
+    }
   });
 };
+
+const observerSections = new IntersectionObserver(activeSections, options);
+
+sections.forEach((section) => observerSections.observe(section));
 
 //efecto maquina de escribir
 const typed = new Typed(".text-presentation", {
@@ -54,3 +57,14 @@ const typed = new Typed(".text-presentation", {
   backDelay: 1200,
   loop: true,
 });
+
+const visibleMenu = () => {
+  // nav.classList.toggle("max-md:hidden");
+  nav.classList.toggle("max-md:scale-100");
+  openMenu.classList.toggle("hidden");
+  closeMenu.classList.toggle("hidden");
+};
+
+//boton de navegacion para moviles
+openMenu.addEventListener("click", visibleMenu);
+closeMenu.addEventListener("click", visibleMenu);
