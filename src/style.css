@@ -72,7 +72,7 @@
 
     /* HEADER*/
     .header {
-        @apply flex justify-between items-center w-full h-20 px-12 relative;
+        @apply flex justify-between items-center w-full h-20 px-12 relative max-md:p-2;
     }
     
     .bg-header-fixed {
@@ -137,10 +137,14 @@
     /*SECTION ABOUT*/
 
     .section-about{
-        @apply h-screen grid grid-cols-2 grid-rows-[minmax(430px,1fr)_minmax(350px,_430px)] 
-        max-[1116px]:grid-rows-[500px_390px_470px] max-[1116px]:grid-cols-1 max-w-[75vw] 
-        max-[1550px]:max-w-[90vw] mx-auto gap-5 max-[1116px]:gap-1 max-[1140px]:h-auto 
-        max-[590px]:grid-rows-[330px_400px_720px] max-[650px]:grid-rows-[330px_400px_720px];
+        @apply h-screen grid grid-cols-2 grid-rows-[minmax(430px,1fr)_minmax(350px,_430px)] max-w-[75vw] mx-auto gap-5
+        max-[1550px]:max-w-[90vw]
+        max-[1116px]:grid-rows-[500px_390px_470px] max-[1116px]:grid-cols-1  
+        max-[1116px]:gap-1 max-[1140px]:h-max
+        max-[650px]:block
+        ;
+        
+
     }
 
     .skills{

@@ -29,14 +29,7 @@ export default {
             marginBottom: "10px",
           },
         },
-        rotation: {
-          "o%": {
-            transform: "rotateZ(0deg)",
-          },
-          "0%": {
-            transform: "rotateZ(360deg)",
-          },
-        },
+
         card: {
           "0%": {
             transform: "translateX(-500px)",
@@ -51,6 +44,14 @@ export default {
           },
           "100%": {
             transform: "translateX(0px)",
+          },
+        },
+        rotation: {
+          "0%": {
+            transform: "rotateZ(0deg)",
+          },
+          "0%": {
+            transform: "rotateZ(360deg)",
           },
         },
         loader: {
