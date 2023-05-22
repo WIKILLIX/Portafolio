@@ -11,6 +11,7 @@ export default {
         reverse: "cardReverse 500ms ease-in-out",
         loader: "loader 500ms alternate infinite ease",
         shadowLoader: "shadowLoader 500ms alternate infinite ease",
+        onda: "onda 1.7s infinite",
       },
       keyframes: {
         giro: {
@@ -85,6 +86,19 @@ export default {
           "100%": {
             transform: "scaleX(.2)",
             opacity: ".4",
+          },
+        },
+
+        onda: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "15%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "scale(1.5)",
           },
         },
       },

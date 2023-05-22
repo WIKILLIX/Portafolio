@@ -63,6 +63,7 @@
         background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,2,51,1) 50%, rgba(0,0,0,1) 100%);
     }
     
+
     /*HEADER ACTIVE*/
     .header-active{
         @apply inline-block text-xl
@@ -97,6 +98,22 @@
         after:-bottom-0.5 after:left-0 after:absolute after:w-0 after:h-0.5 after:bg-[#ffffff] after:ease-[cubic-bezier(0.25,0.8,0.25,1)] 
         after:duration-500 after:transition-[width,left] hover:after:w-full hover:after:left-0;
     }
+
+
+/* INICIO*/
+
+    .contact-me{
+        @apply uppercase relative h-11 w-44 border-2 rounded-lg text-center text-[#070228] font-bold bg-[#A5C5E9]
+        after:absolute after:-top-[2px] after:-left-[2px] after:h-11 after:w-44 after:bg-[#A5C5E9] after:opacity-0 after:rounded-lg after:-z-10 after:animate-onda
+       
+    }
+    .delay{
+        transition-delay: 1000ms !important;
+    }
+    .delay-1300{
+        transition-delay: 1300ms !important;
+    }
+
 
 
     /* REDES SOCIALES*/
@@ -134,6 +151,9 @@
     }
 
 
+
+
+
     /*SECTION ABOUT*/
 
     .section-about{
@@ -146,6 +166,8 @@
         
 
     }
+
+    
 
     .skills{
         @apply relative grid place-items-center w-36 h-36;
@@ -172,7 +194,7 @@
     .base,
     .title,
     .icon{
-        @apply absolute cursor-pointer;
+        @apply absolute;
     }
 
 

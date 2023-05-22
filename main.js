@@ -10,6 +10,8 @@ const openMenu = document.querySelector("#open-menu");
 const closeMenu = document.querySelector("#close-menu");
 const nav = document.querySelector("nav");
 const loader = document.querySelector("#loader");
+const dateYear = new Date();
+const dateCopyright = document.getElementById("year");
 
 //mantiene el loader hasta que la pagina carga
 window.addEventListener("load", () => {
@@ -51,7 +53,7 @@ sections.forEach((section) => observerSections.observe(section));
 //efecto maquina de escribir
 
 const typed = new Typed(".text-presentation", {
-  strings: ["web developer", "fullstack", "freelance"],
+  strings: ["desarrollador web", "fullstack", "freelance"],
   typeSpeed: 50,
   backSpeed: 40,
   startDelay: 300,
@@ -69,3 +71,11 @@ const visibleMenu = () => {
 //boton de navegacion para moviles
 openMenu.addEventListener("click", visibleMenu);
 closeMenu.addEventListener("click", visibleMenu);
+
+const date = () => {
+  const getYear = dateYear.getFullYear();
+
+  dateCopyright.innerHTML = getYear;
+};
+
+date();
